@@ -74,7 +74,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #020202; }
+  background: #CC11F0; }/* See if this is the first line on main page */
   body.is-preload *, body.is-preload *:before, body.is-preload *:after, body.is-resizing *, body.is-resizing *:before, body.is-resizing *:after {
     -moz-animation: none !important;
     -webkit-animation: none !important;
@@ -108,7 +108,7 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #cc11f0;
+  color: #cc11f0; /* this is the 3 lines on the main page */
   text-decoration: none; }
   a:hover {
     border-bottom-color: #cc11f0;
