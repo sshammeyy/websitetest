@@ -87,7 +87,7 @@ body {
 
 /* Type */
 body, input, select, textarea {
-  color: #b5abb1;/*SMall menu on sidebar also maybe icons too? */
+  color: #666363;/*SMall menu on sidebar also maybe icons too? */
   font-family: "Open Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
