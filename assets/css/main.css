@@ -1138,8 +1138,8 @@ input[type="radio"] {
       width: 2.0625em; }
   input[type="checkbox"]:checked + label:before,
   input[type="radio"]:checked + label:before {
-    background: #ed3695;
-    border-color: #ed3695; /* this could be Text but I am not entrily sure :(  */
+    background: #e0bdcf;
+    border-color: #e0bdcf; /* this could be Text but I am not entrily sure :(  */
     color: #020202;
     content: '\f00c'; }
   input[type="checkbox"]:focus + label:before,
