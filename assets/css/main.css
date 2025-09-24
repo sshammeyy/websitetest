@@ -2074,7 +2074,7 @@ button,
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  border-bottom: solid 5px #cc11f0; /* I think this is the top text */
+  border-bottom: solid 5px #020202; /* I think this is the top text */
   padding: 6em 0 1em 0;
   position: relative; }
   #header > * {
