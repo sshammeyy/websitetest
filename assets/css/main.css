@@ -127,7 +127,7 @@ p {
   margin: 0 0 2em 0; }
 /* Headings */
 h1, h3, h4, h5, h6 {
-  color: #ed3695 !important;  /* Your new pink shade */
+  color: #B948BE !important;  /* testing color*/
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   line-height: 1.5;
@@ -2288,5 +2288,5 @@ html body h3,
 html body h4,
 html body h5,
 html body h6 {
-  color: #ffb2da !important;
+  color: #B948BE !important; /*test */
 }
