@@ -126,7 +126,7 @@ em, i {
 p {
   margin: 0 0 2em 0; }
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
   color: #ed3695 !important;  /* Your new pink shade */
   font-family: "Roboto Slab", serif;
   font-weight: 700;
@@ -2284,7 +2284,6 @@ button,
 /* Force heading colors */
 /* FORCE all headings pink */
 html body h1,
-html body h2,
 html body h3,
 html body h4,
 html body h5,
