@@ -87,7 +87,7 @@ body {
 
 /* Type */
 body, input, select, textarea {
-  color: #000000;/*SMall menu on sidebar also maybe icons too? */
+  color: #fcd4eb;/*SMall menu on sidebar also maybe icons too? */
   font-family: "Open Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
@@ -1948,7 +1948,7 @@ button,
         margin-bottom: 0;
         padding-bottom: 0; }
     #sidebar > .inner > .alt {
-      background-color: #000000; /* Text*/
+      background-color: #fdeaea; /* Text*/
       border-bottom: 0;
       margin: -2.22222em 0 4.44444em -2.22222em;
       padding: 2.22222em;
