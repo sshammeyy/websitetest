@@ -186,7 +186,7 @@ sup {
   top: -0.5em; }
 
 blockquote {
-  border-left: solid 3px#000000; /*see what this does */
+  border-left: solid 3px#cc11f0; /*see what this does */
   font-style: italic;
   margin: 0 0 2em 0;
   padding: 0.5em 0 0.5em 2em; }
@@ -1140,7 +1140,7 @@ input[type="radio"] {
   input[type="radio"]:checked + label:before {
     background: #e0bdcf;
     border-color: #e0bdcf; /* this could be Text but I am not entrily sure :(  */
-    color: #020202;
+    color: #d14eea;
     content: '\f00c'; }
   input[type="checkbox"]:focus + label:before,
   input[type="radio"]:focus + label:before {
