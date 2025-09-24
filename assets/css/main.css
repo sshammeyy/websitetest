@@ -1031,7 +1031,7 @@ textarea {
   background: #020202;
   border-radius: 0.375em;
   border: none;
-  border: solid 1px #d14eea; /* going to see if this is the side ;) */
+  border: solid 1px #d14eea; 
   color: inherit;
   display: block;
   outline: 0;
@@ -1101,7 +1101,7 @@ input[type="radio"] {
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     text-decoration: none;
-    color:  #d14eea; /* going to see if this is the side ;) */
+    color:  #d14eea; 
     cursor: pointer;
     display: inline-block;
     font-size: 1em;
@@ -1125,7 +1125,7 @@ input[type="radio"] {
     input[type="radio"] + label:before {
       background: #020202;
       border-radius: 0.375em;
-      border: solid 1px #d14eea; /* going to see if this is the side ;) */
+      border: solid 1px #d14eea; 
       content: '';
       display: inline-block;
       font-size: 0.8em;
@@ -1172,7 +1172,7 @@ input[type="radio"] + label:before {
 /* Box */
 .box {
   border-radius: 0.375em;
-  border: solid 1px#d14eea; /* going to see if this is the side ;) */
+  border: solid 1px#d14eea; 
   margin-bottom: 2em;
   padding: 1.5em; }
   .box > :last-child,
@@ -1927,7 +1927,7 @@ button,
   -webkit-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   -ms-transition: margin-left 0.5s ease, box-shadow 0.5s ease;
   transition: margin-left 0.5s ease, box-shadow 0.5s ease;
-  background-color: #f30000;/* THIS IS THE SIDE!!!! */
+  background-color: #d389e2;/* THIS IS THE SIDE!!!! */
   font-size: 0.9em;
   position: relative;
   width: 26em; }
@@ -1948,7 +1948,7 @@ button,
         margin-bottom: 0;
         padding-bottom: 0; }
     #sidebar > .inner > .alt {
-      background-color: #000000; /* I think this is side */
+      background-color: #000000; 
       border-bottom: 0;
       margin: -2.22222em 0 4.44444em -2.22222em;
       padding: 2.22222em;
