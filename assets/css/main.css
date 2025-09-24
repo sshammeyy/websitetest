@@ -101,10 +101,10 @@ body {
   color: inherit; /* inherits from html, stays neutral */
 }
 
-.icon.fa-linkedin { color: #0077b5; } /* LinkedIn blue */
-.icon.fa-github { color: #333; }       /* GitHub dark */
-.icon.fa-envelope { color: #d44638; } /* Gmail red */
-.icon.fa-phone { color: #25d366; }    /* WhatsApp/phone green */
+.icon.fa-linkedin { color: #cc11f0; } /* LinkedIn blue */
+.icon.fa-github { color: #cc11f0; }       /* GitHub dark */
+.icon.fa-envelope { color: #cc11f0; } /* Gmail red */
+.icon.fa-phone { color: #cc11f0; }    /* WhatsApp/phone green */
 
 a {
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -130,9 +130,15 @@ em, i {
 p {
   margin: 0 0 2em 0; }
   p {
-  color: #dfdfdf; /* body should change */
+  color: #FCF8FA; /* body should change */
   font-size: 13pt;
 }
+.p2 {
+  color: #000000; /* the about me bottom page */
+  font-size: 14pt; /* optional */
+  font-weight: 500; /* optional */
+}
+
 
 /* Headings */
 h1, h3, h4, h5, h6 {
