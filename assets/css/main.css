@@ -87,7 +87,7 @@ body {
 
 /* Type */
 body, input, select, textarea {
-  color: #fcd4eb;/*SMall menu on sidebar also maybe icons too? */
+  color: #b5abb1;/*SMall menu on sidebar also maybe icons too? */
   font-family: "Open Sans", sans-serif;
   font-size: 13pt;
   font-weight: 400;
@@ -1948,7 +1948,7 @@ button,
         margin-bottom: 0;
         padding-bottom: 0; }
     #sidebar > .inner > .alt {
-      background-color: #fdeaea; /* Text*/
+      background-color: #000000; /* top of the side bar*/
       border-bottom: 0;
       margin: -2.22222em 0 4.44444em -2.22222em;
       padding: 2.22222em;
@@ -2113,7 +2113,7 @@ button,
 
 #banner h1 {
   margin-top: -0.125em;
-  color: #e6b1cc !important;  /* Force Pink on the title welcome to my pf */
+  color: #E926BF !important;  /* Force Pink on the title welcome to my pf */
   font-weight: 700;
   font-family: "Roboto Slab", serif;
 }
