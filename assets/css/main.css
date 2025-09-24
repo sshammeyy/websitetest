@@ -1948,7 +1948,7 @@ button,
         margin-bottom: 0;
         padding-bottom: 0; }
     #sidebar > .inner > .alt {
-      background-color: #000000; 
+      background-color: #000000; /* Text*/
       border-bottom: 0;
       margin: -2.22222em 0 4.44444em -2.22222em;
       padding: 2.22222em;
@@ -2074,7 +2074,7 @@ button,
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  border-bottom: solid 5px #cc11f0;
+  border-bottom: solid 5px #cc11f0; /* I think this is the top text */
   padding: 6em 0 1em 0;
   position: relative; }
   #header > * {
