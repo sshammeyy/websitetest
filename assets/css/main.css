@@ -100,10 +100,7 @@ body {
   line-height: 1.65;
   color: inherit; /* inherits from html, stays neutral */
 }
-.icon.fab.fa-linkedin { color: #cc11f0; }
-.icon.fab.fa-github { color: #cc11f0; }
-.icon.fas.fa-envelope { color: #cc11f0; }
-.icon.fas.fa-phone { color: #cc11f0; }
+
 .icon { color: #cc11f0; }
 
 a {
