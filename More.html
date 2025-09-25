@@ -3,106 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>More About Me </title>
-  <link rel="stylesheet" href="assets/css/main.css"> <!-- your CSS -->
-    <style>
-    /* Make all paragraphs this color and size */
-    p {
-      color: #FCF8FA; /* light color for text */
-      font-size: 13pt;
-      margin: 0 0 2em 0; /* keep your spacing */
+  <title>Mango & Mocha Game</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #fff7e6, #f0e6ff);
+      margin: 0;
+      padding: 0;
+      color: #333;
     }
-      
-       li {
-      color: #FCF8FA; /* light color for text */
-      font-size: 13pt;
-      margin: 0 0 2em 0; /* keep your spacing */
+    header {
+      background: #6c4c3f;
+      color: white;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
-        h2 {
-      color: #FCF8FA; /* light color for text */
-      font-size: 13pt;
-      margin: 0 0 2em 0; /* keep your spacing */
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease-in;
+    }
+    img {
+      width: 350px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    .game-desc {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+    .highlight-mango {
+      color: #ff9933;
+      font-weight: bold;
+    }
+    .highlight-mocha {
+      color: #5a3825;
+      font-weight: bold;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #6c4c3f;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: #8a5c47;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-</head>
 <body>
+  <header>🐾 Mango & Mocha Game 🐾</header>
 
-  <!-- Header (re-use your site’s header) -->
-  <header id="header">
-    <a href="index.html" class="logo"><strong>My Portfolio</strong></a>
-    <ul class="icons">
-      <li>
-        <a href="https://www.linkedin.com/in/samantha-velez-8ba4072a0/" target="_blank" class="icon brands fa-linkedin">
-          <span class="label">LinkedIn</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/sshammeyy" target="_blank" class="icon brands fa-github">
-          <span class="label">GitHub</span>
-        </a>
-      </li>
-    </ul>
-  </header>
+  <div class="container">
+    <img src="images/mango-mocha.jpg" alt="Mango and Mocha">
 
-  <!-- Main Content -->
-  <section>
-    <header class="major">
-      <h2>More About Me</h2>
-    </header>
+    <div class="game-desc">
+      <p>
+        Welcome to the <strong>Mango & Mocha Game</strong>! 🎮  
+        This fun project is inspired by the classic Google Chrome Dino game, but with a twist — you get to play as either 
+        <span class="highlight-mango">Mango</span> 🐕 (the corgi mix) or 
+        <span class="highlight-mocha">Mocha</span> 🐕 (the chocolate lab).
+      </p>
+      <p>
+        Run, jump, and collect treats while avoiding obstacles. 🦴✨  
+        The goal is simple: survive as long as you can and beat your high score!
+      </p>
+      <p><em>Game currently in development... stay tuned for updates!</em></p>
+    </div>
 
-<div class="content" style="display: flex; justify-content: flex-start; padding: 40px;">
-  <div style="max-width: 400px; text-align: center;">
-    <!-- Picture -->
-    <img src="images/pic12.jpg" 
-         alt="Project Screenshot" 
-         style="width: 100%; max-width: 400px; height: auto; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin-bottom: 20px;">
-    
-    <!-- About Me (merged Bio + About) -->
-    <h2 style="margin-bottom: 15px;">About Me</h2>
-    <p>
-      I am a proud <strong>first-generation college student</strong>, the first in four generations 
-      of my family to pursue higher education. My journey has taught me resilience, 
-      determination, and the importance of creating opportunities not only for myself 
-      but also as an inspiration to those around me.
-    </p>
-    <p>
-      I have a strong passion for <strong>technology, problem-solving, and cybersecurity</strong>, 
-      where I enjoy finding innovative ways to protect information and build secure systems. 
-      Friends and colleagues describe me as <strong>driven, approachable, and curious</strong>. 
-      I enjoy collaborating with others, sharing knowledge, and turning challenges into opportunities. 
-      My goal is to make a positive impact not just in the tech world, but in every community I am part of.
-    </p>
-    <p>
-      Outside of cybersecurity and IT, I enjoy spending time with my two dogs — 
-      <strong>Mocha</strong>, a chocolate Labrador, and <strong>Mango</strong>, a corgi mix. 🐶🐾  
-      I also love gaming, and my three favorite titles are: 
-      <span style="color: gold; font-weight: bold;">CS:GO</span>, 
-      <span style="color: red; font-weight: bold;">Rust</span>, and 
-      <span style="color: purple; font-weight: bold;">League of Legends</span>. 🎮
-    </p>
-    <p>
-      Beyond gaming, I enjoy reading, hiking, learning new skills, and working on 
-      creative projects that let me combine both tech and personal interests.
-    </p>
-
-    <!-- Fun Projects Section -->
-    <h2 style="margin-top: 30px; margin-bottom: 15px;">Fun Projects</h2>
-    <ul style="list-style: none; padding: 0; text-align: left;">
-      <li>💻 <a href="#" target="_blank">Random Quote Generator</a></li>
-      <li>🎮 <a href="M&M.html" target="_blank">Mango & Mocha Game</a></li>
-      <li>🌦️ <a href="#" target="_blank">Weather App</a></li>
-      <li>🛠️ <a href="#" target="_blank">Personal Portfolio Website</a></li>
-    </ul>
+    <a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
   </div>
-</div>
-
-  </section>
-
-  <!-- Footer -->
-  <footer id="footer">
-    <p>&copy; 2025 Samantha Velez. All rights reserved.</p>
-  </footer>
-
 </body>
 </html>
+
