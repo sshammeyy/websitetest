@@ -1,14 +1,14 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-// Game state variables
+// Game state
 let dog, dogImg, obstacles, score, gameOver, obstacleInterval;
 
 // Obstacle image
 const obstacleImg = new Image();
 obstacleImg.src = "images/bone.png";
 
-// Reset game state
+// Reset game
 function resetGame(choice) {
   dog = { x: 50, y: 220, width: 50, height: 50, dy: 0, gravity: 1.5, jumpPower: -20, grounded: true };
   obstacles = [];
@@ -17,23 +17,21 @@ function resetGame(choice) {
   dogImg = new Image();
 
   if (choice === "mango") {
-    dogImg.src = "images/mango.png";
+    dogImg.src = "images/mango.jpg";
   } else {
-    dogImg.src = "images/mocha.png";
+    dogImg.src = "images/mocha.jpg";
   }
 }
 
-// Start game (called from HTML buttons)
+// Start game
 function startGame(choice) {
   document.getElementById("characterSelect").style.display = "none";
   canvas.style.display = "block";
 
   resetGame(choice);
 
-  // Clear any old obstacle spawner
   if (obstacleInterval) clearInterval(obstacleInterval);
 
-  // Spawn obstacles every 2s
   obstacleInterval = setInterval(() => {
     if (!gameOver) {
       obstacles.push({ x: canvas.width, y: 240, width: 40, height: 40 });
@@ -51,7 +49,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Restart with R key
+// Restart
 document.addEventListener("keydown", (e) => {
   if (e.code === "KeyR" && gameOver) {
     document.getElementById("characterSelect").style.display = "block";
@@ -59,7 +57,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Main loop
+// Game loop
 function gameLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -89,16 +87,16 @@ function gameLoop() {
     dog.dy += dog.gravity;
   }
 
-  // Draw dog
+  // Draw dog (Mango or Mocha)
   ctx.drawImage(dogImg, dog.x, dog.y, dog.width, dog.height);
 
-  // Obstacles
+  // Draw obstacles
   for (let i = 0; i < obstacles.length; i++) {
     let obs = obstacles[i];
     obs.x -= 6;
     ctx.drawImage(obstacleImg, obs.x, obs.y, obs.width, obs.height);
 
-    // Collision detection
+    // Collision
     if (
       dog.x < obs.x + obs.width &&
       dog.x + dog.width > obs.x &&
@@ -110,7 +108,7 @@ function gameLoop() {
     }
   }
 
-  // Remove old obstacles
+  // Remove off-screen obstacles
   obstacles = obstacles.filter(obs => obs.x > -obs.width);
 
   // Score
