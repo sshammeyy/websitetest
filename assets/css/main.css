@@ -116,6 +116,20 @@ a {
     color: #cc11f0 !important; }
     a:hover strong {
       color: inherit; }
+/* Make LinkedIn and GitHub links purple */
+#header .icons a {
+  color: rgb(221, 210, 221);
+}
+
+/* Make email and phone gray */
+#header .icons li.icon {
+  color: rgb(255, 244, 244);
+}
+
+/* Optional: hover effect */
+#header .icons a:hover {
+  color: #fefdff; /* lighter purple */
+}
 
 strong, b {
   color: #f52ab8; /*see what this changed */
