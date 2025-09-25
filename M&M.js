@@ -2,7 +2,7 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 // Game state variables
-let dog, dogImg, obstacles, score, gameOver;
+let dog, dogImg, obstacles, score, gameOver, obstacleInterval;
 
 // Obstacle image
 const obstacleImg = new Image();
@@ -29,36 +29,51 @@ function startGame(choice) {
   canvas.style.display = "block";
 
   resetGame(choice);
-  gameLoop();
+
+  // Clear any old obstacle spawner
+  if (obstacleInterval) clearInterval(obstacleInterval);
+
+  // Spawn obstacles every 2s
+  obstacleInterval = setInterval(() => {
+    if (!gameOver) {
+      obstacles.push({ x: canvas.width, y: 240, width: 40, height: 40 });
+    }
+  }, 2000);
+
+  requestAnimationFrame(gameLoop);
 }
 
 // Jump
 document.addEventListener("keydown", (e) => {
-  if (e.code === "Space" && dog && dog.grounded) {
+  if (e.code === "Space" && dog && dog.grounded && !gameOver) {
     dog.dy = dog.jumpPower;
     dog.grounded = false;
   }
 });
 
-// Spawn obstacles
-setInterval(() => {
-  if (!gameOver && canvas.style.display !== "none") {
-    obstacles.push({ x: canvas.width, y: 240, width: 40, height: 40 });
+// Restart with R key
+document.addEventListener("keydown", (e) => {
+  if (e.code === "KeyR" && gameOver) {
+    document.getElementById("characterSelect").style.display = "block";
+    canvas.style.display = "none";
   }
-}, 2000);
+});
 
 // Main loop
 function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   if (gameOver) {
     ctx.fillStyle = "red";
     ctx.font = "30px Arial";
-    ctx.fillText("Game Over! Final Score: " + score, 200, 150);
+    ctx.textAlign = "center";
+    ctx.fillText("Game Over!", canvas.width / 2, 120);
+    ctx.fillStyle = "black";
     ctx.font = "20px Arial";
-    ctx.fillText("Press R to Restart", 300, 190);
+    ctx.fillText("Final Score: " + score, canvas.width / 2, 160);
+    ctx.fillText("Press R to Restart", canvas.width / 2, 200);
     return;
   }
-
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Ground
   ctx.fillStyle = "#6c4c3f";
@@ -83,7 +98,7 @@ function gameLoop() {
     obs.x -= 6;
     ctx.drawImage(obstacleImg, obs.x, obs.y, obs.width, obs.height);
 
-    // Collision
+    // Collision detection
     if (
       dog.x < obs.x + obs.width &&
       dog.x + dog.width > obs.x &&
@@ -91,6 +106,7 @@ function gameLoop() {
       dog.height + dog.y > obs.y
     ) {
       gameOver = true;
+      clearInterval(obstacleInterval);
     }
   }
 
@@ -101,15 +117,8 @@ function gameLoop() {
   score++;
   ctx.fillStyle = "black";
   ctx.font = "20px Arial";
+  ctx.textAlign = "left";
   ctx.fillText("Score: " + score, 20, 30);
 
   requestAnimationFrame(gameLoop);
 }
-
-// Restart with R key
-document.addEventListener("keydown", (e) => {
-  if (e.code === "KeyR" && gameOver) {
-    document.getElementById("characterSelect").style.display = "block";
-    canvas.style.display = "none";
-  }
-});
