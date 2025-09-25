@@ -104,6 +104,7 @@ body {
 .icon.fab.fa-github { color: #cc11f0; }
 .icon.fas.fa-envelope { color: #cc11f0; }
 .icon.fas.fa-phone { color: #cc11f0; }
+.icon { color: #cc11f0; }
 
 a {
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
