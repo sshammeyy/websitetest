@@ -1138,7 +1138,7 @@ input[type="radio"] {
       font-weight: 900; }
     input[type="checkbox"] + label:before,
     input[type="radio"] + label:before {
-      background: #020202;
+      background: #d14eea;/*this*/
       border-radius: 0.375em;
       border: solid 1px #d14eea; 
       content: '';
