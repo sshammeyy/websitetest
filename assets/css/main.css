@@ -100,11 +100,10 @@ body {
   line-height: 1.65;
   color: inherit; /* inherits from html, stays neutral */
 }
-
-.icon.fa-linkedin { color: #cc11f0; } /* LinkedIn blue */
-.icon.fa-github { color: #cc11f0; }       /* GitHub dark */
-.icon.fa-envelope { color: #cc11f0; } /* Gmail red */
-.icon.fa-phone { color: #cc11f0; }    /* WhatsApp/phone green */
+.icon.fab.fa-linkedin { color: #cc11f0; }
+.icon.fab.fa-github { color: #cc11f0; }
+.icon.fas.fa-envelope { color: #cc11f0; }
+.icon.fas.fa-phone { color: #cc11f0; }
 
 a {
   -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
