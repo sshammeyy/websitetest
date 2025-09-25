@@ -46,3 +46,23 @@
   </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mango & Mocha Game</title>
+</head>
+<body>
+  <div id="characterSelect" style="text-align: center; margin: 30px;">
+    <h2>Choose Your Pup 🐶</h2>
+    <button onclick="startGame('mango')">Play as Mango 🟠</button>
+    <button onclick="startGame('mocha')">Play as Mocha 🍫</button>
+  </div>
+
+  <canvas id="gameCanvas" width="800" height="300" style="display:none;"></canvas>
+
+  <!-- Make sure this is LAST -->
+  <script src="M&M.js"></script>
+</body>
+</html>

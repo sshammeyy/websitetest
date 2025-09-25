@@ -1,33 +1,40 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-let dog = { x: 50, y: 220, width: 50, height: 50, dy: 0, gravity: 1.5, jumpPower: -20, grounded: true };
-let obstacles = [];
-let score = 0;
-let gameOver = false;
-let dogImg = new Image();
+// Game state variables
+let dog, dogImg, obstacles, score, gameOver;
 
-// Choose character
+// Obstacle image
+const obstacleImg = new Image();
+obstacleImg.src = "images/bone.png";
+
+// Reset game state
+function resetGame(choice) {
+  dog = { x: 50, y: 220, width: 50, height: 50, dy: 0, gravity: 1.5, jumpPower: -20, grounded: true };
+  obstacles = [];
+  score = 0;
+  gameOver = false;
+  dogImg = new Image();
+
+  if (choice === "mango") {
+    dogImg.src = "images/mango.png";
+  } else {
+    dogImg.src = "images/mocha.png";
+  }
+}
+
+// Start game (called from HTML buttons)
 function startGame(choice) {
   document.getElementById("characterSelect").style.display = "none";
   canvas.style.display = "block";
 
-  if (choice === "mango") {
-    dogImg.src = "images/mango.png"; // Mango sprite
-  } else if (choice === "mocha") {
-    dogImg.src = "images/mocha.png"; // Mocha sprite
-  }
-
+  resetGame(choice);
   gameLoop();
 }
 
-// Load obstacle image
-const obstacleImg = new Image();
-obstacleImg.src = "images/bone.png";
-
 // Jump
 document.addEventListener("keydown", (e) => {
-  if (e.code === "Space" && dog.grounded) {
+  if (e.code === "Space" && dog && dog.grounded) {
     dog.dy = dog.jumpPower;
     dog.grounded = false;
   }
@@ -46,6 +53,8 @@ function gameLoop() {
     ctx.fillStyle = "red";
     ctx.font = "30px Arial";
     ctx.fillText("Game Over! Final Score: " + score, 200, 150);
+    ctx.font = "20px Arial";
+    ctx.fillText("Press R to Restart", 300, 190);
     return;
   }
 
@@ -74,7 +83,7 @@ function gameLoop() {
     obs.x -= 6;
     ctx.drawImage(obstacleImg, obs.x, obs.y, obs.width, obs.height);
 
-    // Collision detection
+    // Collision
     if (
       dog.x < obs.x + obs.width &&
       dog.x + dog.width > obs.x &&
@@ -85,7 +94,7 @@ function gameLoop() {
     }
   }
 
-  // Clean up old obstacles
+  // Remove old obstacles
   obstacles = obstacles.filter(obs => obs.x > -obs.width);
 
   // Score
@@ -96,3 +105,11 @@ function gameLoop() {
 
   requestAnimationFrame(gameLoop);
 }
+
+// Restart with R key
+document.addEventListener("keydown", (e) => {
+  if (e.code === "KeyR" && gameOver) {
+    document.getElementById("characterSelect").style.display = "block";
+    canvas.style.display = "none";
+  }
+});
